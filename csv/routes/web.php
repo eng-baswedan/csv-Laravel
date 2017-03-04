@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/upload', [
+	'as'=>'upload',
+	'uses'=>'UploadeController@showForm'
+]);
+Route::post('/upload', [
+	'as'=>'upload',
+	'uses'=>'UploadeController@showData'
+]);
